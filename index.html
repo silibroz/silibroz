@@ -6,56 +6,60 @@
   <title>Silibroz — A Collective of Brands</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav class="nav">
     <div class="logo">SILIBROZ</div>
-    <div class="nav-links">
-      <a href="index.html">Brands</a>
-      <a href="about.html">About</a>
-    </div>
+    <a href="about.html" class="nav-btn">About Us</a>
   </nav>
 
   <section class="hero">
-    <div class="hero-tag">A collective of brands</div>
-    <h1 class="hero-title">WE BUILD<br><span>STREETS.</span></h1>
-    <p class="hero-sub">Silibroz is a multi-brand collective built for the culture. Each brand under our roof carries its own identity — raw, real, and built to last.</p>
-    <div class="hero-deco-line"></div>
-    <div class="hero-deco-year">EST. 2024</div>
+    <div class="hero-img-wrap">
+      <img src="hero.jpg" alt="Silibroz" class="hero-img" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-tag">A collective of brands</div>
+      <h1 class="hero-title">WE BUILD<br><span>STREETS.</span></h1>
+      <a href="#brands" class="hero-cta">Explore Now</a>
+    </div>
   </section>
 
-  <div class="brands-label">— our brands</div>
+  <section class="brands-section" id="brands">
+    <div class="section-label">— our brands</div>
+    <div class="cards-grid">
 
-  <div class="brands-grid">
-    <a href="brands/hermoza.html" class="brand-card active">
-      <div class="brand-name">HERMOZA</div>
-      <div class="brand-type">Streetwear / Apparel</div>
-      <p class="brand-desc">Modern streetwear luxury. Oversized silhouettes, premium fabrics, built for the upper lane.</p>
-      <div class="brand-arrow">VISIT BRAND →</div>
-    </a>
-    <div class="brand-card placeholder">
-      <div class="brand-name">COMING SOON</div>
-      <div class="brand-type">New drop</div>
-      <p class="brand-desc">Something new is in the works.</p>
+      <a href="brands/hermoza.html" class="card">
+        <div class="card-img">
+          <img src="brands/hermoza.jpg" alt="Hermoza" />
+        </div>
+        <div class="card-body">
+          <div class="card-title">HERMOZA</div>
+          <div class="card-sub">Streetwear / Apparel</div>
+          <div class="card-link">Visit Brand →</div>
+        </div>
+      </a>
+
+      <div class="card no-link">
+        <div class="card-img placeholder">
+          <span>More brands in making</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">MORE COMING</div>
+          <div class="card-sub">Stay Tuned</div>
+          <div class="card-link">Watch This Space →</div>
+        </div>
+      </div>
+
     </div>
-    <div class="brand-card placeholder">
-      <div class="brand-name">COMING SOON</div>
-      <div class="brand-type">New drop</div>
-      <p class="brand-desc">Something new is in the works.</p>
-    </div>
-    <div class="brand-card placeholder">
-      <div class="brand-name">COMING SOON</div>
-      <div class="brand-type">New drop</div>
-      <p class="brand-desc">Something new is in the works.</p>
-    </div>
-  </div>
+  </section>
 
   <footer class="footer">
-    <div class="footer-left"><span class="dot"></span>SILIBROZ © 2025</div>
-    <div class="footer-right">SILIGURI, IN</div>
+    <div class="footer-text"><span class="dot"></span>SILIBROZ © 2026</div>
+    <div class="footer-text">SILIGURI, IN</div>
   </footer>
 
 </body>
