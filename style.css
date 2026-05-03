@@ -47,7 +47,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .nav-btn {
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--green);
@@ -112,7 +112,7 @@ a { text-decoration: none; color: inherit; }
 
 .hero-cta {
   display: inline-block;
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 3px;
   text-transform: uppercase;
   background: #4e6e58;
@@ -127,7 +127,7 @@ a { text-decoration: none; color: inherit; }
 .brands-section { padding: 4rem 3rem; flex: 1; }
 
 .section-label {
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 3px;
   color: var(--text);
   text-transform: uppercase;
@@ -179,42 +179,58 @@ a { text-decoration: none; color: inherit; }
 
 .card-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 22px;
-  letter-spacing: 3px;
+  font-size: 26px;
+    letter-spacing: 3px;
   color: #0a0a0a;
   margin-bottom: 0.3rem;
 }
 
 .card-sub {
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 2px;
   color: #2a2a2a;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
-.card-link { font-size: 10px; letter-spacing: 2px; color: #4e6e58; text-transform: uppercase; }
+.card-link { 
+  font-size: 14px; 
+  letter-spacing: 2px; 
+  color: #4e6e58; 
+  text-transform: uppercase; 
+}
 
-.card.no-link { opacity: 0.45; cursor: default; }
+.card.no-link { 
+  opacity: 0.45; 
+  cursor: default; 
+}
 
-.about-body { padding: 3.5rem 3rem; max-width: 680px; flex: 1; }
+.about-body { 
+  padding: 3.5rem 3rem; 
+  max-width: 680px; 
+  flex: 1; 
+}
 
 .about-label {
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 3px;
   color: #4e6e58;
   text-transform: uppercase;
   margin-bottom: 0.8rem;
 }
 
-.about-text { font-size: 14px; color: #0a0a0a; line-height: 1.85; }
+.about-text { 
+  font-size: 16px; 
+  color: #0a0a0a; 
+  line-height: 1.85; 
+}
 
 .about-divider { border: none; border-top: 0.5px solid var(--border); margin: 2.5rem 0; }
 
 .about-cta-strip { padding: 2rem 3rem; border-top: 0.5px solid var(--border); }
 
 .cta-link {
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 3px;
   color: var(--green);
   text-transform: uppercase;
@@ -238,7 +254,12 @@ a { text-decoration: none; color: inherit; }
   margin-top: auto;
 }
 
-.footer-text { font-size: 10px; letter-spacing: 2px; color: var(--text-dim); text-transform: uppercase; }
+.footer-text { 
+  font-size: 14px; 
+  letter-spacing: 2px; 
+  color: var(--text-dim); 
+  text-transform: uppercase; 
+}
 
 .dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--green); margin-right: 8px; vertical-align: middle; }
 
