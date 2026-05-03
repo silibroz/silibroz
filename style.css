@@ -1,15 +1,15 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --green: #4e6e58;
+  --green: #91a196;
   --green-dim: #91a196;
-  --bg: #111612;
-  --bg-2: #161d14;
-  --bg-3: #1a2218;
-  --border: #2a3528;
-  --text: #f2f7f2;
-  --text-muted: #91a196;
-  --text-dim: #5a7a6a;
+  --bg: #4e6e58;
+  --bg-2: #456050;
+  --bg-3: #3d5848;
+  --border: #3a5a4a;
+  --text: #edffe6;
+  --text-muted: #c8dcc0;
+  --text-dim: #91a196;
 }
 
 html { scroll-behavior: smooth; }
@@ -59,7 +59,7 @@ a { text-decoration: none; color: inherit; }
   display: inline-block;
 }
 
-.nav-btn:hover { background: var(--green); color: var(--bg); }
+.nav-btn:hover { background: #91a196; color: #f2f7f2; }
 
 .hero {
   position: relative;
@@ -111,8 +111,8 @@ a { text-decoration: none; color: inherit; }
   font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  background: var(--green);
-  color: var(--bg);
+  background: #91a196;
+  color: #f2f7f2;
   padding: 14px 32px;
   font-weight: 500;
   transition: opacity 0.2s;
