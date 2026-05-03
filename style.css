@@ -8,8 +8,8 @@
   --bg-3: #3d5848;
   --border: #3a5a4a;
   --text: #edffe6;
-  --text-muted: #c8dcc0;
-  --text-dim: #91a196;
+  --text-muted: #edffe6;
+  --text-dim: #edffe6;
 }
 
 html { scroll-behavior: smooth; }
