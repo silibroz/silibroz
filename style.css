@@ -1,15 +1,15 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --green: #91a196;
-  --green-dim: #91a196;
+  --green: #ffffff;
+  --green-dim: #ffffff;
   --bg: #4e6e58;
   --bg-2: #456050;
   --bg-3: #3d5848;
   --border: #3a5a4a;
   --text: #ffffff;
   --text-muted: #ffffff;
-  --text-dim: #ffffff;
+  --text-dim: #cccccc;
 }
 
 html { scroll-behavior: smooth; }
@@ -59,7 +59,7 @@ a { text-decoration: none; color: inherit; }
   display: inline-block;
 }
 
-.nav-btn:hover { background: #91a196; color: #f2f7f2; }
+.nav-btn:hover { background: #ffffff; color: #4e6e58; }
 
 .hero {
   position: relative;
@@ -111,8 +111,8 @@ a { text-decoration: none; color: inherit; }
   font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  background: #91a196;
-  color: #f2f7f2;
+  background: #ffffff;
+  color: #4e6e58;
   padding: 14px 32px;
   font-weight: 500;
   transition: opacity 0.2s;
