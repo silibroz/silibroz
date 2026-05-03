@@ -205,10 +205,13 @@ a { text-decoration: none; color: inherit; }
   cursor: default; 
 }
 
-.about-body { 
-  padding: 3.5rem 3rem; 
-  max-width: 680px; 
-  flex: 1; 
+.about-body {
+  padding: 3.5rem 3rem;
+  max-width: 780px;
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
+  text-align: center;
 }
 
 .about-label {
