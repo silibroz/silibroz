@@ -7,9 +7,9 @@
   --bg-2: #456050;
   --bg-3: #3d5848;
   --border: #3a5a4a;
-  --text: #edffe6;
-  --text-muted: #edffe6;
-  --text-dim: #edffe6;
+  --text: #ffffff;
+  --text-muted: #ffffff;
+  --text-dim: #ffffff;
 }
 
 html { scroll-behavior: smooth; }
