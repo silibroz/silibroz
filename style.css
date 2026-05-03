@@ -1,14 +1,13 @@
-/* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ── Base ── */
 :root {
   --green: #8fad6e;
   --green-dim: #5a7a45;
-  --bg: #1a1f1a;
-  --bg-2: #1f271f;
-  --border: #2a3a2a;
-  --text: #e8ede4;
+  --bg: #111612;
+  --bg-2: #161d14;
+  --bg-3: #1a2218;
+  --border: #2a3528;
+  --text: #e2e8dc;
   --text-muted: #6a7a65;
   --text-dim: #4a5a45;
 }
@@ -18,7 +17,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-weight: 400;
   line-height: 1.6;
   min-height: 100vh;
@@ -28,12 +27,11 @@ body {
 
 a { text-decoration: none; color: inherit; }
 
-/* ── Nav ── */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2.5rem;
+  padding: 1.4rem 3rem;
   border-bottom: 0.5px solid var(--border);
   position: sticky;
   top: 0;
@@ -43,117 +41,143 @@ a { text-decoration: none; color: inherit; }
 
 .logo {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 22px;
-  letter-spacing: 4px;
+  font-size: 24px;
+  letter-spacing: 5px;
   color: var(--green);
 }
 
-.nav-links {
-  display: flex;
-  gap: 2rem;
+.nav-btn {
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--green);
+  border: 0.5px solid var(--green);
+  padding: 10px 22px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-block;
 }
 
-.nav-links a {
-  color: var(--text-muted);
-  transition: color 0.2s;
-}
+.nav-btn:hover { background: var(--green); color: var(--bg); }
 
-.nav-links a:hover,
-.nav-links a.active { color: var(--green); }
-
-/* ── Hero ── */
 .hero {
-  padding: 5rem 2.5rem 3rem;
   position: relative;
-  border-bottom: 0.5px solid var(--border);
+  height: 480px;
+  background: var(--bg-3);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.hero-img-wrap { position: absolute; inset: 0; }
+
+.hero-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; }
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--bg) 0%, transparent 65%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 3rem 3rem;
+  width: 100%;
 }
 
 .hero-tag {
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 3px;
   color: var(--green);
   text-transform: uppercase;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.8rem;
 }
 
 .hero-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(64px, 12vw, 108px);
-  line-height: 0.9;
+  font-size: clamp(56px, 10vw, 96px);
+  line-height: 0.92;
   color: var(--text);
+  margin-bottom: 1.8rem;
   letter-spacing: 2px;
-  margin-bottom: 2rem;
 }
 
 .hero-title span { color: var(--green); }
 
-.hero-sub {
-  font-size: 13px;
-  color: var(--text-muted);
-  max-width: 340px;
-  line-height: 1.75;
-  letter-spacing: 0.3px;
+.hero-cta {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: var(--green);
+  color: var(--bg);
+  padding: 14px 32px;
+  font-weight: 500;
+  transition: opacity 0.2s;
 }
 
-.hero-deco-line {
-  position: absolute;
-  right: 2.5rem;
-  top: 5rem;
-  width: 0.5px;
-  height: 120px;
-  background: var(--border);
-}
+.hero-cta:hover { opacity: 0.85; }
 
-.hero-deco-year {
-  position: absolute;
-  right: 1.8rem;
-  top: 5.5rem;
-  font-size: 10px;
-  color: var(--text-dim);
-  letter-spacing: 2px;
-  writing-mode: vertical-rl;
-}
+.brands-section { padding: 4rem 3rem; flex: 1; }
 
-/* ── Brands grid ── */
-.brands-label {
-  padding: 2rem 2.5rem 1rem;
+.section-label {
   font-size: 10px;
   letter-spacing: 3px;
   color: var(--text-dim);
   text-transform: uppercase;
+  margin-bottom: 2rem;
 }
 
-.brands-grid {
+.cards-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.5px;
+  gap: 1px;
   background: var(--border);
-  margin: 0 2.5rem 2.5rem;
-  flex: 1;
 }
 
-.brand-card {
+.card {
   background: var(--bg);
-  padding: 2rem;
-  transition: background 0.2s;
+  overflow: hidden;
   display: block;
+  transition: background 0.2s;
 }
 
-.brand-card.active:hover { background: var(--bg-2); }
+.card:not(.no-link):hover { background: var(--bg-2); }
 
-.brand-name {
+.card-img {
+  height: 280px;
+  background: var(--bg-3);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.card-img.placeholder span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.card-body {
+  padding: 1.5rem;
+  border-top: 0.5px solid var(--border);
+}
+
+.card-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 28px;
+  font-size: 22px;
   letter-spacing: 3px;
   color: var(--green);
   margin-bottom: 0.3rem;
 }
 
-.brand-type {
+.card-sub {
   font-size: 10px;
   letter-spacing: 2px;
   color: var(--text-dim);
@@ -161,63 +185,25 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 1rem;
 }
 
-.brand-desc {
-  font-size: 12px;
-  color: var(--text-muted);
-  line-height: 1.65;
-}
+.card-link { font-size: 10px; letter-spacing: 2px; color: var(--green-dim); text-transform: uppercase; }
 
-.brand-arrow {
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: var(--green);
-  margin-top: 1.5rem;
-  text-transform: uppercase;
-}
+.card.no-link { opacity: 0.45; cursor: default; }
 
-.brand-card.placeholder {
-  opacity: 0.25;
-  cursor: default;
-}
-
-.brand-card.placeholder .brand-name {
-  font-size: 18px;
-  color: var(--text-dim);
-}
-
-/* ── About page ── */
-.about-body {
-  padding: 3rem 2.5rem;
-  max-width: 640px;
-  flex: 1;
-}
-
-.about-block { margin-bottom: 0; }
+.about-body { padding: 3.5rem 3rem; max-width: 680px; flex: 1; }
 
 .about-label {
   font-size: 10px;
   letter-spacing: 3px;
   color: var(--green);
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
-.about-text {
-  font-size: 14px;
-  color: var(--text-muted);
-  line-height: 1.85;
-}
+.about-text { font-size: 14px; color: var(--text-muted); line-height: 1.85; }
 
-.about-divider {
-  border: none;
-  border-top: 0.5px solid var(--border);
-  margin: 2.5rem 0;
-}
+.about-divider { border: none; border-top: 0.5px solid var(--border); margin: 2.5rem 0; }
 
-.about-cta-strip {
-  padding: 2rem 2.5rem;
-  border-top: 0.5px solid var(--border);
-}
+.about-cta-strip { padding: 2rem 3rem; border-top: 0.5px solid var(--border); }
 
 .cta-link {
   font-size: 11px;
@@ -227,26 +213,16 @@ a { text-decoration: none; color: inherit; }
   transition: opacity 0.2s;
 }
 
-.cta-link:hover { opacity: 0.7; }
+.cta-link:hover { opacity: 0.6; }
 
-.back-strip {
-  padding: 1.2rem 2.5rem;
-  border-top: 0.5px solid var(--border);
-}
+.back-strip { padding: 1.2rem 3rem; border-top: 0.5px solid var(--border); }
 
-.back-link {
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: var(--text-dim);
-  text-transform: uppercase;
-  transition: color 0.2s;
-}
+.back-link { font-size: 10px; letter-spacing: 2px; color: var(--text-dim); text-transform: uppercase; transition: color 0.2s; }
 
 .back-link:hover { color: var(--green); }
 
-/* ── Footer ── */
 .footer {
-  padding: 1.2rem 2.5rem;
+  padding: 1.2rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -254,31 +230,17 @@ a { text-decoration: none; color: inherit; }
   margin-top: auto;
 }
 
-.footer-left,
-.footer-right {
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: var(--text-dim);
-  text-transform: uppercase;
-}
+.footer-text { font-size: 10px; letter-spacing: 2px; color: var(--text-dim); text-transform: uppercase; }
 
-.dot {
-  display: inline-block;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--green);
-  margin-right: 8px;
-  vertical-align: middle;
-}
+.dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--green); margin-right: 8px; vertical-align: middle; }
 
-/* ── Mobile ── */
 @media (max-width: 600px) {
   .nav { padding: 1.2rem 1.5rem; }
-  .hero { padding: 3rem 1.5rem 2.5rem; }
-  .hero-deco-line, .hero-deco-year { display: none; }
-  .brands-grid { grid-template-columns: 1fr; margin: 0 1.5rem 2rem; }
-  .brands-label { padding: 1.5rem 1.5rem 0.8rem; }
+  .hero { height: 380px; }
+  .hero-content { padding: 0 1.5rem 2.5rem; }
+  .brands-section { padding: 2.5rem 1.5rem; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .card-img { height: 220px; }
   .about-body { padding: 2.5rem 1.5rem; }
   .about-cta-strip, .back-strip { padding: 1.5rem; }
   .footer { padding: 1.2rem 1.5rem; }
