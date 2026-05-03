@@ -63,7 +63,8 @@ a { text-decoration: none; color: inherit; }
 
 .hero {
   position: relative;
-  height: 480px;
+  height: 60vh;
+  min-height: 480px;
   background: var(--bg-3);
   display: flex;
   align-items: flex-end;
