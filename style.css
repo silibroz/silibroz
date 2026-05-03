@@ -202,12 +202,12 @@ a { text-decoration: none; color: inherit; }
 .about-label {
   font-size: 10px;
   letter-spacing: 3px;
-  color: var(--green);
+  color: #4e6e58;
   text-transform: uppercase;
   margin-bottom: 0.8rem;
 }
 
-.about-text { font-size: 14px; color: var(--text-muted); line-height: 1.85; }
+.about-text { font-size: 14px; color: #0a0a0a; line-height: 1.85; }
 
 .about-divider { border: none; border-top: 0.5px solid var(--border); margin: 2.5rem 0; }
 
