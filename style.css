@@ -137,12 +137,23 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 2rem;
 }
 
-.cards-grid {
-  display: grid;
-  grid-template-columns: 400px;
-  gap: 1px;
-  background: transparent;
-  justify-content: center;
+.cards-slider {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+}
+
+.cards-slider::-webkit-scrollbar { height: 4px; }
+.cards-slider::-webkit-scrollbar-track { background: var(--bg-3); }
+.cards-slider::-webkit-scrollbar-thumb { background: var(--green); border-radius: 2px; }
+
+.cards-slider .card {
+  min-width: 320px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
 }
 
 .card {
@@ -262,7 +273,7 @@ a { text-decoration: none; color: inherit; }
   .hero { height: 50vh; min-height: 300px; }
   .hero-content { padding: 0; }
   .brands-section { padding: 2.5rem 1.5rem; }
-  .cards-grid { grid-template-columns: 1fr; }
+  .cards-slider .card { min-width: 260px; }
   .card-img { height: 220px; }
   .about-body { padding: 2.5rem 1.5rem; }
   .about-cta-strip, .back-strip { padding: 1.5rem; }
