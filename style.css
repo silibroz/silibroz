@@ -259,7 +259,7 @@ a { text-decoration: none; color: inherit; }
 
 @media (max-width: 749px) {
   .nav { padding: 1.2rem 1.5rem; }
-  .hero { height: 80vh; min-height: 400px; }
+  .hero { height: 50vh; min-height: 300px; }
   .hero-content { padding: 0; }
   .brands-section { padding: 2.5rem 1.5rem; }
   .cards-grid { grid-template-columns: 1fr; }
