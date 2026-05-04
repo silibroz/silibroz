@@ -257,7 +257,7 @@ a { text-decoration: none; color: inherit; }
 
 .dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--green); margin-right: 8px; vertical-align: middle; }
 
-@media (max-width: 600px) {
+@media (max-width: 749px) {
   .nav { padding: 1.2rem 1.5rem; }
   .hero { height: 80vh; min-height: 400px; }
   .hero-content { padding: 0; }
