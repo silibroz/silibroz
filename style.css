@@ -78,11 +78,7 @@ a { text-decoration: none; color: inherit; }
 .desktop-img { display: block; }
 .mobile-img { display: none; }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: transparent;
-}
+.hero-overlay { position: absolute; inset: 0; background: transparent; }
 
 .hero-content {
   position: relative;
@@ -137,7 +133,13 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 2rem;
 }
 
-
+.cards-grid {
+  display: grid;
+  grid-template-columns: 400px;
+  gap: 1.5rem;
+  background: transparent;
+  justify-content: center;
+}
 
 .card {
   background: var(--bg);
@@ -190,12 +192,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 1rem;
 }
 
-.card-link {
-  font-size: 14px;
-  letter-spacing: 2px;
-  color: #4e6e58;
-  text-transform: uppercase;
-}
+.card-link { font-size: 14px; letter-spacing: 2px; color: #4e6e58; text-transform: uppercase; }
 
 .card.no-link { opacity: 0.45; cursor: default; }
 
