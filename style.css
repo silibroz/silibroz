@@ -28,8 +28,8 @@ body {
 a { text-decoration: none; color: inherit; }
 
 .nav {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding: 1.4rem 3rem;
   border-bottom: 0.5px solid var(--border);
@@ -37,6 +37,15 @@ a { text-decoration: none; color: inherit; }
   top: 0;
   background: #2b2b2b;
   z-index: 100;
+}
+
+.nav .logo {
+  grid-column: 2;
+}
+
+.nav .nav-btn {
+  grid-column: 3;
+  justify-self: end;
 }
 
 .logo {
