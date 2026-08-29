@@ -305,7 +305,22 @@ a { text-decoration: none; color: inherit; }
   .mobile-img { display: block; }
 }
 
-.hamburger { display: none; background: none; border: none; color: #f5f5f0; font-size: 24px; cursor: pointer; grid-column: 3; justify-self: end; }
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  appearance: none;
+  color: #f5f5f0;
+  font-size: 28px;
+  line-height: 1;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-family: inherit;
+  grid-column: 3;
+  justify-self: end;
+}
+
+.hamburger:focus { outline: none; }
 
 .mobile-menu {
   display: none;
