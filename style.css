@@ -340,7 +340,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 @media (max-width: 749px) {
-  .nav { padding: 1.2rem 1.5rem; }
+  .nav { padding: 0.2rem 1.5rem; }
   .hero { height: 50vh; min-height: 300px; }
   .hero-content { padding-bottom: 2rem; align-items: flex-end; }
   .brands-section { padding: 2.5rem 1.5rem; }
